@@ -5,18 +5,21 @@ In one step, if the current number is even, you have to divide it by 2, otherwis
  */
 //Example 3:
 let num =  123
-function numberOfSteps(num) {
-  let steps = 0;
-while (num > 0) {
+output = 12
+let numberOfSteps =  (num) => {
+  let newNum = 0;
+  
+  while (num > 0) {
     if (num % 2 === 0) {
-      num /= 2;
-      steps++;
+      num = num / 2;
     } else {
-      num--;
-      steps++;
+      num -= 1;
     }
+    newNum++;
   }
-  console.log(num)
-  return steps;
 
-}
+  return newNum;
+};
+
+console.log(numberOfSteps())
+
